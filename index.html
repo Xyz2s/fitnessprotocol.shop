@@ -1,362 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitnessProtocol - Your Personal Fitness Journey</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitnessProtocol - Responsive Neon Redesign</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header" id="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="#home" class="logo">
-                    <span class="logo-text">FitnessProtocol</span>
-                </a>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="#programs" class="nav-link">Programs</a></li>
-                    <li><a href="#trainers" class="nav-link">Trainers</a></li>
-                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <button class="cta-btn" onclick="scrollToContact()">Get Started</button>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Transform Your Body,<br>
-                    <span class="gradient-text">Elevate Your Life</span>
-                </h1>
-                <p class="hero-description">
-                    Join thousands who've achieved their fitness goals with personalized training programs, expert guidance, and a supportive community.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn-primary" onclick="scrollToPrograms()">Explore Programs</button>
-                    <button class="btn-secondary" onclick="showVideo()">Watch How It Works</button>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <h3>10K+</h3>
-                        <p>Active Members</p>
-                    </div>
-                    <div class="stat">
-                        <h3>500+</h3>
-                        <p>Workout Programs</p>
-                    </div>
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>Expert Trainers</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80" alt="Fitness Training">
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose FitnessProtocol?</h2>
-                <p class="section-subtitle">Everything you need to reach your fitness goals</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Personalized Plans</h3>
-                    <p>Custom workout and nutrition plans tailored to your goals, fitness level, and lifestyle.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Progress Tracking</h3>
-                    <p>Advanced analytics to monitor your progress and adjust your plan for optimal results.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏋️</div>
-                    <h3>Expert Trainers</h3>
-                    <p>Access to certified trainers with years of experience in fitness and nutrition.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Community Support</h3>
-                    <p>Join a motivating community of like-minded individuals on their fitness journey.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Mobile App</h3>
-                    <p>Train anywhere with our mobile app. Track workouts, meals, and progress on the go.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Proven Results</h3>
-                    <p>Evidence-based methods that deliver real, sustainable results for lasting change.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section class="programs" id="programs">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Programs</h2>
-                <p class="section-subtitle">Find the perfect program for your goals</p>
-            </div>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-tag">Popular</div>
-                    <h3>Strength Building</h3>
-                    <p>Build lean muscle and increase strength with progressive resistance training.</p>
-                    <ul class="program-features">
-                        <li>✓ 12-week program</li>
-                        <li>✓ 4-5 workouts/week</li>
-                        <li>✓ Nutrition guide included</li>
-                    </ul>
-                    <button class="btn-program" onclick="selectProgram('Strength Building')">Learn More</button>
-                </div>
-                <div class="program-card featured">
-                    <div class="program-tag featured">Best Value</div>
-                    <h3>Weight Loss Protocol</h3>
-                    <p>Science-backed approach to sustainable fat loss and body transformation.</p>
-                    <ul class="program-features">
-                        <li>✓ 16-week program</li>
-                        <li>✓ 5-6 workouts/week</li>
-                        <li>✓ Meal plans + recipes</li>
-                    </ul>
-                    <button class="btn-program" onclick="selectProgram('Weight Loss Protocol')">Learn More</button>
-                </div>
-                <div class="program-card">
-                    <div class="program-tag">New</div>
-                    <h3>Athletic Performance</h3>
-                    <p>Enhance speed, power, and agility for peak athletic performance.</p>
-                    <ul class="program-features">
-                        <li>✓ 10-week program</li>
-                        <li>✓ 4-5 workouts/week</li>
-                        <li>✓ Sport-specific training</li>
-                    </ul>
-                    <button class="btn-program" onclick="selectProgram('Athletic Performance')">Learn More</button>
-                </div>
-                <div class="program-card">
-                    <h3>Yoga & Flexibility</h3>
-                    <p>Improve flexibility, balance, and mindfulness through yoga practice.</p>
-                    <ul class="program-features">
-                        <li>✓ 8-week program</li>
-                        <li>✓ 3-4 sessions/week</li>
-                        <li>✓ Meditation guides</li>
-                    </ul>
-                    <button class="btn-program" onclick="selectProgram('Yoga & Flexibility')">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trainers Section -->
-    <section class="trainers" id="trainers">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Meet Our Expert Trainers</h2>
-                <p class="section-subtitle">Learn from the best in the industry</p>
-            </div>
-            <div class="trainers-grid">
-                <div class="trainer-card">
-                    <h3>Alex Chen</h3>
-                    <p class="trainer-role">Strength & Conditioning</p>
-                    <p class="trainer-bio">15+ years experience, CSCS certified, former Olympic athlete</p>
-                    <button class="btn-trainer" onclick="bookTrainer('Alex Chen')">Book Session</button>
-                </div>
-                <div class="trainer-card">
-                    <h3>Maria Rodriguez</h3>
-                    <p class="trainer-role">Yoga & Wellness</p>
-                    <p class="trainer-bio">10 years teaching, RYT-500, holistic health coach</p>
-                    <button class="btn-trainer" onclick="bookTrainer('Maria Rodriguez')">Book Session</button>
-                </div>
-                <div class="trainer-card">
-                    <h3>David Kim</h3>
-                    <p class="trainer-role">Nutrition Expert</p>
-                    <p class="trainer-bio">MS in Nutrition, 8+ years experience, published researcher</p>
-                    <button class="btn-trainer" onclick="bookTrainer('David Kim')">Book Session</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Success Stories</h2>
-                <p class="section-subtitle">Real results from real people</p>
-            </div>
-            <div class="testimonials-container">
-                <button class="testimonial-nav prev" id="testimonial-prev">‹</button>
-                <div class="testimonials-slider" id="testimonials-slider">
-                    <div class="testimonial-card active">
-                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Lost 30 pounds in 4 months! The personalized plan and support from the trainers made all the difference. I've never felt stronger or more confident."</p>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Johnson">
-                            <div>
-                                <h4>Sarah Johnson</h4>
-                                <p>Weight Loss Program</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"As a busy professional, I needed something flexible. FitnessProtocol's app and virtual training sessions fit perfectly into my schedule. Down 2 pants sizes!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Chen">
-                            <div>
-                                <h4>Michael Chen</h4>
-                                <p>Strength Building Program</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"The yoga program transformed not just my body but my mindset. I'm more flexible, less stressed, and sleep better. Highly recommend!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Emily Davis">
-                            <div>
-                                <h4>Emily Davis</h4>
-                                <p>Yoga & Flexibility Program</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="testimonial-nav next" id="testimonial-next">›</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2>Get Started Today</h2>
-                    <p>Ready to transform your life? Contact us to learn more about our programs and get started on your fitness journey.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:fitnessprotocol101@gmail.com">fitnessprotocol101@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📞</span>
-                            <div>
-                                <h4>Phone</h4>
-                                <a href="tel:+12342258152">+1 864 502-1870</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <div>
-                                <h4>Address</h4>
-                                <p>Online & Virtual Training</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)">
-                    </div>
-                    <div class="form-group">
-                        <select id="program" name="program">
-                            <option value="">Select a Program (Optional)</option>
-                            <option value="strength">Strength Building</option>
-                            <option value="weightloss">Weight Loss Protocol</option>
-                            <option value="athletic">Athletic Performance</option>
-                            <option value="yoga">Yoga & Flexibility</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your fitness goals..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>FitnessProtocol</h3>
-                    <p>Your partner in achieving lasting fitness results and building a healthier lifestyle.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#trainers">Trainers</a></li>
-                        <li><a href="#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms of Service</a></li>
-                        <li><a href="#refund">Refund Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="mailto:info@fitnessprotocol.shop">Email Us</a></li>
-                        <li><a href="tel:+12342258152">Call Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 FitnessProtocol.shop. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Success Modal -->
-    <div class="modal" id="success-modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <div class="modal-icon">✓</div>
-            <h3>Thank You!</h3>
-            <p id="modal-message">Your message has been sent successfully. We'll get back to you soon!</p>
-            <button class="btn-primary" onclick="closeModal()">Close</button>
-        </div>
+  <!-- SIDEBAR / NAV -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-short">FP</div>
+      <div class="brand-full">FitnessProtocol</div>
     </div>
 
-    <script src="script.js"></script>
+    <nav class="side-nav" role="navigation" aria-label="Main">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#why" class="nav-link">Features</a>
+      <a href="#programs" class="nav-link">Programs</a>
+      <a href="#trainers" class="nav-link">Trainers</a>
+      <a href="#testimonials" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="sidebar-cta">
+      <button id="sidebar-cta" class="btn neon">Get Started</button>
+    </div>
+  </aside>
+
+  <!-- TOP BAR for mobile -->
+  <header class="topbar" id="topbar">
+    <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="topbar-title">FitnessProtocol</div>
+    <button id="cta-top" class="btn neon small">Start</button>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main" id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <h1>Transform Your Body,<br><span>Elevate Your Life</span></h1>
+        <p class="lead">
+          Join thousands who've achieved their fitness goals with personalized training programs,
+          expert guidance, and a supportive community.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn neon" id="btn-explore" onclick="scrollToPrograms()">Explore Programs</button>
+          <button class="btn outline" id="btn-watch" onclick="showVideo()">Watch How It Works</button>
+        </div>
+
+        <ul class="hero-stats">
+          <li><strong>10K+</strong><span>Active Members</span></li>
+          <li><strong>500+</strong><span>Workout Programs</span></li>
+          <li><strong>50+</strong><span>Expert Trainers</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1000&q=80" alt="Fitness training">
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="why" class="section why">
+      <div class="section-head">
+        <h2>Why Choose FitnessProtocol?</h2>
+        <p class="muted">Everything you need to reach your fitness goals</p>
+      </div>
+
+      <div class="why-grid">
+        <article class="why-item"><div class="icon">🎯</div><h3>Personalized Plans</h3><p>Custom workout and nutrition plans tailored to your goals.</p></article>
+        <article class="why-item"><div class="icon">📊</div><h3>Progress Tracking</h3><p>Advanced analytics to monitor progress and adjust plans.</p></article>
+        <article class="why-item"><div class="icon">🏋️</div><h3>Expert Trainers</h3><p>Access certified trainers with years of experience.</p></article>
+        <article class="why-item"><div class="icon">🤝</div><h3>Community Support</h3><p>Join a motivating community of like-minded people.</p></article>
+        <article class="why-item"><div class="icon">📱</div><h3>Mobile App</h3><p>Train anywhere with our mobile capabilities.</p></article>
+        <article class="why-item"><div class="icon">🏆</div><h3>Proven Results</h3><p>Evidence-based methods that deliver outcomes.</p></article>
+      </div>
+    </section>
+
+    <!-- PROGRAMS (horizontal scroll) -->
+    <section id="programs" class="section programs">
+      <div class="section-head">
+        <h2>Our Programs</h2>
+        <p class="muted">Find the perfect program for your goals</p>
+      </div>
+
+      <div class="programs-wrap" tabindex="0" aria-label="Programs carousel">
+        <button class="slide-btn left" id="prog-prev" aria-label="Previous">‹</button>
+
+        <div class="programs-track" id="programsTrack">
+          <article class="program">
+            <div class="program-body">
+              <h3>Strength Building</h3>
+              <p>Build lean muscle and increase strength with progressive resistance training.</p>
+              <ul>
+                <li>12-week program</li>
+                <li>4–5 workouts/week</li>
+                <li>Nutrition guide included</li>
+              </ul>
+              <button class="btn neon" onclick="selectProgram('Strength Building')">Learn More</button>
+            </div>
+          </article>
+
+          <article class="program">
+            <div class="program-body">
+              <h3>Weight Loss Protocol</h3>
+              <p>Science-backed approach to sustainable fat loss and body transformation.</p>
+              <ul>
+                <li>16-week program</li>
+                <li>5–6 workouts/week</li>
+                <li>Meal plans + recipes</li>
+              </ul>
+              <button class="btn neon" onclick="selectProgram('Weight Loss Protocol')">Learn More</button>
+            </div>
+          </article>
+
+          <article class="program">
+            <div class="program-body">
+              <h3>Athletic Performance</h3>
+              <p>Enhance power, speed and agility for peak athletic performance.</p>
+              <ul>
+                <li>10-week program</li>
+                <li>4–5 workouts/week</li>
+                <li>Sport-specific training</li>
+              </ul>
+              <button class="btn neon" onclick="selectProgram('Athletic Performance')">Learn More</button>
+            </div>
+          </article>
+        </div>
+
+        <button class="slide-btn right" id="prog-next" aria-label="Next">›</button>
+      </div>
+    </section>
+
+    <!-- TRAINERS -->
+    <section id="trainers" class="section trainers">
+      <div class="section-head">
+        <h2>Meet Our Expert Trainers</h2>
+        <p class="muted">Learn from the best in the industry</p>
+      </div>
+
+      <div class="trainer-grid">
+        <div class="trainer-card"><h4>Alex Chen</h4><p class="role">Strength & Conditioning</p><button class="btn neon" onclick="bookTrainer('Alex Chen')">Book</button></div>
+        <div class="trainer-card"><h4>Maria Rodriguez</h4><p class="role">Yoga & Wellness</p><button class="btn neon" onclick="bookTrainer('Maria Rodriguez')">Book</button></div>
+        <div class="trainer-card"><h4>David Kim</h4><p class="role">Nutrition Expert</p><button class="btn neon" onclick="bookTrainer('David Kim')">Book</button></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials">
+      <div class="section-head">
+        <h2>Success Stories</h2>
+        <p class="muted">Real results from real people</p>
+      </div>
+
+      <div class="testi-wrap">
+        <div class="testi-card">⭐⭐⭐⭐⭐<p>"Lost 30 pounds in 4 months! The personalized plan and support made the difference."</p><strong>Sarah Johnson</strong><small>Weight Loss Program</small></div>
+        <div class="testi-card">⭐⭐⭐⭐⭐<p>"Flexible and effective — fits my schedule."</p><strong>Michael Chen</strong><small>Strength Building</small></div>
+        <div class="testi-card">⭐⭐⭐⭐⭐<p>"Yoga program improved my sleep and mobility."</p><strong>Emily Davis</strong><small>Yoga & Flexibility</small></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="contact-left">
+        <h2>Get Started Today</h2>
+        <p>Ready to transform your life? Contact us to learn more about our programs and get started on your fitness journey.</p>
+        <div class="contact-info">
+          <div>📧 <a href="mailto:fitnessprotocol101@gmail.com">fitnessprotocol101@gmail.com</a></div>
+          <div>📞 <a href="tel:+18645021870">+1 864 502-1870</a></div>
+          <div>📍 Online & Virtual Training</div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" aria-label="Contact form">
+        <input id="name" type="text" placeholder="Your Name" required>
+        <input id="email" type="email" placeholder="Your Email" required>
+        <input id="phone" type="tel" placeholder="Phone (Optional)">
+        <select id="programSelect">
+          <option value="">Select a Program (Optional)</option>
+          <option value="strength">Strength Building</option>
+          <option value="weightloss">Weight Loss Protocol</option>
+          <option value="athletic">Athletic Performance</option>
+          <option value="yoga">Yoga & Flexibility</option>
+        </select>
+        <textarea id="message" rows="4" placeholder="Tell us about your fitness goals..." required></textarea>
+        <div class="form-actions">
+          <button class="btn neon" type="submit">Send Message</button>
+          <button class="btn outline" type="button" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> FitnessProtocol — All rights reserved.</div>
+    </footer>
+  </main>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
